@@ -1,0 +1,26 @@
+{
+    "data": {
+        "data": [
+            {
+                "basicExcess": "10% min R3 500",
+                "annualRiskPremium": 35477.689965999998094048351049,
+                "annualRate": 0.0342945287249879146584952139,
+                "monthlyRiskPremium": 3225.2433696256321127293631434,
+                "monthlyRate": 0.0374121995509981500327434389
+            },
+            {
+                "basicExcess": "5% min R1 000",
+                "annualRiskPremium": 36227.250995000002149026840925,
+                "annualRate": 0.0350190923102948331591122155,
+                "monthlyRiskPremium": 3293.3852565747965854825451970,
+                "monthlyRate": 0.0382026322657298758600497024
+            }
+        ],
+        "sumInsured": 1034500,
+        "sumInsuredSource": "TU Retail"
+    },
+    "count": 0,
+    "isSuccess": true,
+    "statusCode": 200,
+    "message": ""
+}

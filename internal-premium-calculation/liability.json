@@ -1,0 +1,24 @@
+{
+    "data": {
+        "data": [
+            {
+                "excess": "Basic Excess",
+                "annualPremium": 14567.906055771189130609855056,
+                "annualRate": 0.00435439597334475251,
+                "monthlyPremium": 1324.3546143889232098445063457,
+                "monthlyRate": 0.00475024842535234828
+            },
+            {
+                "excess": "Excess Waiver",
+                "annualPremium": 15907.077648725331528112292290,
+                "annualRate": 0.00475467885337246127,
+                "monthlyPremium": 1446.0974422055442119017243385,
+                "monthlyRate": 0.00518692049932000399
+            }
+        ]
+    },
+    "count": 0,
+    "isSuccess": true,
+    "statusCode": 200,
+    "message": ""
+}

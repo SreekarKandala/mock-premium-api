@@ -1,0 +1,25 @@
+{
+    "data": {
+        "data": [
+            {
+                "excess": "Basic Excess",
+                "annualPremium": 24593.590003944067575503140688,
+                "annualRate": 0.00259091831896850243,
+                "monthlyPremium": 2232.5661868526262878731358796,
+                "monthlyRate": 0.00282239232136429884
+            },
+            {
+                "excess": "Excess Waiver",
+                "annualPremium": 26863.474943738452566321939230,
+                "annualRate": 0.00283004918483724431,
+                "monthlyPremium": 2438.9192881600788496143650264,
+                "monthlyRate": 0.00308326226199567496
+            }
+        ],
+        "dolomiteMessage": ""
+    },
+    "count": 0,
+    "isSuccess": true,
+    "statusCode": 200,
+    "message": ""
+}

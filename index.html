@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Premium Calculation API</title>
+    <style>
+        :root { color-scheme: light dark; }
+        body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; max-width: 820px; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.55; }
+        h1 { margin-bottom: 0.25rem; }
+        p.sub { color: #6b7280; margin-top: 0; }
+        code { background: rgba(127,127,127,0.15); padding: 0.15em 0.4em; border-radius: 4px; font-size: 0.9em; }
+        ul { list-style: none; padding: 0; }
+        li { padding: 0.6rem 0.8rem; border: 1px solid rgba(127,127,127,0.25); border-radius: 8px; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.6rem; }
+        .method { font-size: 0.72rem; font-weight: 700; color: #fff; background: #16a34a; border-radius: 4px; padding: 0.15rem 0.45rem; letter-spacing: 0.04em; }
+        a { text-decoration: none; color: #2563eb; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92rem; }
+        a:hover { text-decoration: underline; }
+        footer { margin-top: 2rem; color: #6b7280; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <h1>Mock Premium Calculation API</h1>
+    <p class="sub">Static mock endpoints with predefined responses. All return <code>application/json</code> and allow cross-origin requests.</p>
+    <ul id="endpoints"></ul>
+    <footer>Served as static files via GitHub Pages &middot; GET only &middot; responses are fixed.</footer>
+    <script>
+        const base = "internal-premium-calculation/";
+        const endpoints = [
+            "regularMotor", "specifiedallrisk", "liability", "caravan", "trailer",
+            "motorcycle", "watercraft", "houseContentsRisk", "unspecifiedAllRisk",
+            "classicmotor", "buildingRisk"
+        ];
+        const ul = document.getElementById("endpoints");
+        for (const ep of endpoints) {
+            const li = document.createElement("li");
+            const m = document.createElement("span");
+            m.className = "method"; m.textContent = "GET";
+            const a = document.createElement("a");
+            a.href = base + ep + ".json";
+            a.textContent = base + ep + ".json";
+            li.append(m, a);
+            ul.appendChild(li);
+        }
+    </script>
+</body>
+</html>
