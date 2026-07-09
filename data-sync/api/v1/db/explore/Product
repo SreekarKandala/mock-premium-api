@@ -1,0 +1,58 @@
+{
+    "childCount": 1,
+    "children": [
+        {
+            "foreignKey": "productid",
+            "parentKey": "productid",
+            "rowCount": 687,
+            "table": "ProductVersion"
+        }
+    ],
+    "columnCount": 7,
+    "columns": [
+        {
+            "name": "version",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "createdon",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "datetime"
+        },
+        {
+            "name": "name",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "nvarchar"
+        },
+        {
+            "name": "productid",
+            "nullable": false,
+            "primaryKey": true,
+            "type": "uniqueidentifier"
+        },
+        {
+            "name": "underwritingagencyid",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "uniqueidentifier"
+        },
+        {
+            "name": "displayname",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "nvarchar"
+        },
+        {
+            "name": "underwritingagencyname",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "nvarchar"
+        }
+    ],
+    "rowCount": 13,
+    "table": "Product"
+}

@@ -29,15 +29,16 @@
             "regularMotor", "specifiedallrisk", "liability", "caravan", "trailer",
             "motorcycle", "watercraft", "houseContentsRisk", "unspecifiedAllRisk",
             "classicmotor", "buildingRisk"
-        ];
+        ].map(ep => base + ep + ".json");
+        endpoints.push("data-sync/api/v1/db/explore/Product");
         const ul = document.getElementById("endpoints");
-        for (const ep of endpoints) {
+        for (const path of endpoints) {
             const li = document.createElement("li");
             const m = document.createElement("span");
             m.className = "method"; m.textContent = "GET";
             const a = document.createElement("a");
-            a.href = base + ep + ".json";
-            a.textContent = base + ep + ".json";
+            a.href = path;
+            a.textContent = path;
             li.append(m, a);
             ul.appendChild(li);
         }

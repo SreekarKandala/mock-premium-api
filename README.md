@@ -24,6 +24,17 @@ Base path: `internal-premium-calculation/`
 | `unspecifiedAllRisk.json` | `excess` + premiums |
 | `classicmotor.json` | `excess` + premiums |
 
+## Data Sync endpoints
+
+| Endpoint | Response shape |
+| --- | --- |
+| `data-sync/api/v1/db/explore/Product` | table metadata: `columns`, `children`, `rowCount`, `columnCount` |
+
+> This endpoint is an extensionless file so the URL matches the real API path.
+> GitHub Pages serves it without a JSON content type; `fetch(...).json()` still
+> works. If your client requires `Content-Type: application/json`, use the
+> `Product.json` twin at the same path.
+
 ## Usage
 
 ```js
