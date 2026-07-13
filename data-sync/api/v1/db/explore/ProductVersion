@@ -1,0 +1,57 @@
+{
+    "childCount": 0,
+    "children": [],
+    "columnCount": 8,
+    "columns": [
+        {
+            "name": "productversionid",
+            "nullable": false,
+            "primaryKey": true,
+            "type": "uniqueidentifier"
+        },
+        {
+            "name": "productid",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "uniqueidentifier"
+        },
+        {
+            "name": "version",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "effectivedate",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "datetime"
+        },
+        {
+            "name": "expirydate",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "datetime"
+        },
+        {
+            "name": "status",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "nvarchar"
+        },
+        {
+            "name": "createdon",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "datetime"
+        },
+        {
+            "name": "createdby",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "nvarchar"
+        }
+    ],
+    "rowCount": 687,
+    "table": "ProductVersion"
+}
