@@ -1,20 +1,81 @@
 {
-    "childCount": 0,
-    "children": [],
-    "columnCount": 8,
+    "childCount": 12,
+    "children": [
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 2887,
+            "table": "ProductAddressType"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 1367,
+            "table": "ProductAnnualPaymentType"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 7266,
+            "table": "ProductBenefitGroup"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 2062,
+            "table": "ProductBrokerType"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 25887,
+            "table": "ProductCauseOfLoss"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 1348,
+            "table": "ProductDebitOrderStrikeDay"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 389902,
+            "table": "ProductEndorsement"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 23711,
+            "table": "ProductInsurer"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 2054,
+            "table": "ProductMonthlyPaymentType"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 1376,
+            "table": "ProductPaymentFrequency"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 7601,
+            "table": "ProductSection"
+        },
+        {
+            "foreignKey": "productversionid",
+            "parentKey": "productversionid",
+            "rowCount": 8298,
+            "table": "ReinsuranceTreaty"
+        }
+    ],
+    "columnCount": 17,
     "columns": [
-        {
-            "name": "productversionid",
-            "nullable": false,
-            "primaryKey": true,
-            "type": "uniqueidentifier"
-        },
-        {
-            "name": "productid",
-            "nullable": false,
-            "primaryKey": false,
-            "type": "uniqueidentifier"
-        },
         {
             "name": "version",
             "nullable": false,
@@ -22,19 +83,7 @@
             "type": "int"
         },
         {
-            "name": "effectivedate",
-            "nullable": true,
-            "primaryKey": false,
-            "type": "datetime"
-        },
-        {
-            "name": "expirydate",
-            "nullable": true,
-            "primaryKey": false,
-            "type": "datetime"
-        },
-        {
-            "name": "status",
+            "name": "code",
             "nullable": true,
             "primaryKey": false,
             "type": "nvarchar"
@@ -46,12 +95,90 @@
             "type": "datetime"
         },
         {
-            "name": "createdby",
+            "name": "currencycode",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "effectivefrom",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "date"
+        },
+        {
+            "name": "lineofbusiness",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "policyreviewfrequency",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "productid",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "uniqueidentifier"
+        },
+        {
+            "name": "productversionid",
+            "nullable": false,
+            "primaryKey": true,
+            "type": "uniqueidentifier"
+        },
+        {
+            "name": "quotedaysvalid",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "state",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "trackratingfactorchanges",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "bit"
+        },
+        {
+            "name": "effectivefromkey",
+            "nullable": false,
+            "primaryKey": false,
+            "type": "int"
+        },
+        {
+            "name": "productversiondescription",
             "nullable": true,
             "primaryKey": false,
             "type": "nvarchar"
+        },
+        {
+            "name": "canquote",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "bit"
+        },
+        {
+            "name": "cancopyquote",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "bit"
+        },
+        {
+            "name": "cancopyquotetoproduct",
+            "nullable": true,
+            "primaryKey": false,
+            "type": "bit"
         }
     ],
-    "rowCount": 687,
+    "rowCount": 688,
     "table": "ProductVersion"
 }
