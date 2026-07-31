@@ -1,0 +1,11 @@
+{
+    "data": {
+        "creditScore": 700,
+        "rating": 4,
+        "tuCode": "S"
+    },
+    "count": 0,
+    "isSuccess": true,
+    "statusCode": 200,
+    "message": null
+}

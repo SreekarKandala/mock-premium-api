@@ -1,0 +1,229 @@
+{
+    "info": {
+        "name": "Mock Premium API",
+        "description": "Static mock API hosted on GitHub Pages. All endpoints are GET-only and return fixed JSON responses. Base URL: {{baseUrl}}",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "https://sreekarkandala.github.io/mock-premium-api",
+            "type": "string"
+        }
+    ],
+    "event": [
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    "pm.test(\"Status is 200\", function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "pm.test(\"Body is valid JSON\", function () {",
+                    "    pm.response.json();",
+                    "});"
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "Data Sync",
+            "item": [
+                {
+                    "name": "Explore Product table",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/data-sync/api/v1/db/explore/Product",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["data-sync", "api", "v1", "db", "explore", "Product"]
+                        },
+                        "description": "Table metadata for the Product table: columns, child relations, row and column counts. Extensionless path matching the real API; served as application/octet-stream but the body is JSON."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Explore Product table (.json twin)",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/data-sync/api/v1/db/explore/Product.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["data-sync", "api", "v1", "db", "explore", "Product.json"]
+                        },
+                        "description": "Identical payload to the extensionless endpoint, served with Content-Type: application/json."
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Internal Premium Calculation",
+            "item": [
+                {
+                    "name": "Regular Motor",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/regularMotor.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "regularMotor.json"]
+                        },
+                        "description": "basicExcess + annualRiskPremium rows, plus sumInsured."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Building Risk",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/buildingRisk.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "buildingRisk.json"]
+                        },
+                        "description": "excess + premium rows, plus dolomiteMessage."
+                    },
+                    "response": []
+                },
+                {
+                    "name": "House Contents Risk",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/houseContentsRisk.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "houseContentsRisk.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Specified All Risk",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/specifiedallrisk.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "specifiedallrisk.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Unspecified All Risk",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/unspecifiedAllRisk.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "unspecifiedAllRisk.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Liability",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/liability.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "liability.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Caravan",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/caravan.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "caravan.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Trailer",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/trailer.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "trailer.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Motorcycle",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/motorcycle.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "motorcycle.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Watercraft",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/watercraft.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "watercraft.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Classic Motor",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/classicmotor.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "classicmotor.json"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Credit Score",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/internal-premium-calculation/creditScore.json",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["internal-premium-calculation", "creditScore.json"]
+                        },
+                        "description": "Mocks a real POST that takes { surname, forename1, identityNo }. GitHub Pages rejects POST with 405, so this is a GET and the response is fixed."
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}

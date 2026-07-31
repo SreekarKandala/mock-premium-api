@@ -23,6 +23,12 @@ Base path: `internal-premium-calculation/`
 | `houseContentsRisk.json` | `excess` + premiums |
 | `unspecifiedAllRisk.json` | `excess` + premiums |
 | `classicmotor.json` | `excess` + premiums |
+| `creditScore.json` | `creditScore` + `rating` + `tuCode` |
+
+> `creditScore.json` mocks a lookup whose real API is a `POST` taking
+> `{ surname, forename1, identityNo }`. GitHub Pages cannot accept a request body
+> and answers `POST` with `405`, so call it with `GET`. The response is fixed and
+> does not depend on the payload.
 
 ## Data Sync endpoints
 
